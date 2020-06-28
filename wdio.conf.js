@@ -18,7 +18,7 @@ exports.config = {
     //
     specs: [
         './test/elements.js',
-        './test/defaultFunctionality.js'
+     //   './test/defaultFunctionality.js'
     ],
     // Patterns to exclude.
     exclude: [
