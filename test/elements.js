@@ -93,14 +93,39 @@ describe('Complex Counter App', function () {
             const actual = $$(selectorCnt.blackBtn);
             expect(actual).toBeDisplayed();
         })
-        it('TC-021 Label for Default Value Field', function () {
-            const actual = $$(selectorGen.defaultValueFieldLabel)[$$(selectorGen.defaultValueFieldLabel).length-1].isDisplayed();
-            //$$('label')[$$('label').length-1]
-            expect(actual).toEqual(true);
-        })
-        // it('TC-022 Add Counter', function () {
-        //     const actual = $(selectorGen.addCounterBtn).isDisplayed();
+        // it('TC-021 Label for Default Value Field', function () {
+        //     const actual = $$(selectorGen.defaultValueFieldLabel)[$$(selectorGen.defaultValueFieldLabel).length-1].isDisplayed();
+        //     //$$('label')[$$('label').length-1]
         //     expect(actual).toEqual(true);
         // })
+        it('TC-022 Delete Counter', function () {
+            const actual = $(selectorCnt.deleteBtn).isDisplayed();
+            expect(actual).toEqual(true);
+        })
+
+        it('TC-023 Reset button', function () {
+            const actual = $(selectorCnt.resetBtn).isDisplayed();
+            expect(actual).toEqual(true);
+        })
+
+        it('TC-024 Edit Name Field', function () {
+            const actual = $(selectorCnt.editNameField).isDisplayed();
+            expect(actual).toEqual(true);
+        })
+
+        it('TC-025 Label for Edit Name Field', function () {
+            const actual = $(selectorCnt.editNameFieldLabel).isDisplayed();
+            expect(actual).toEqual(true);
+        })
+
+
+    });
+
+    describe('Getting to the page', function () {
+        it('TC-001 Page title is Complex Counter App', function () {
+            browser.url('');
+            const title = browser.getTitle();
+            expect(title).toEqual('Complex Counter App');
+        })
     });
 });
